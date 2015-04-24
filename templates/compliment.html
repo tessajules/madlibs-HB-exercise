@@ -5,7 +5,12 @@
 {% block header %}Hi again.{% endblock %}
 
 {% block body %}
-        Hi {{ person }}! I think you're {{ compliment }}!
+    Hi {{ person }}! I think you are a variety of things:
+    <ol>  
+        {% for compliment in compliments %}
+            <li>{{ compliment }}</li>
+        {% endfor %}
+    </ol>
 
     <form action="/game">
         <label>{{ person }}, would you like to play a game? 

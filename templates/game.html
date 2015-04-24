@@ -3,23 +3,23 @@
 {% block header %}Fill out the form:{% endblock %}
 {% block body %}  
 
-        <form action="/madlib">
+        <form action="/madlib" method="GET">
             <label>Type in a person's name:
-                <input type="text" name="person_name">
+                <input type="text" name="person_name" value="Bob">
             </label>
             <label>Choose a color:
                 <select name="color">
-                    <option value="Red">Red</option
+                    <option value="Red">Red</option>
                     <option value="Blue">Blue</option>
                     <option value="Orange">Orange</option>
                     <option value="Turquoise">Turquoise</option>
                 </select>
             </label>
             <label>Type in a noun:
-                <input type="text" name="noun">
+                <input type="text" name="noun" value="unicorn">
             </label>
             <label>Type in an adjective:
-                <input type="text" name="adjective">
+                <input type="text" name="adjective" value="colorful">
             </label>
             <label>Choose verbs:
                 <input type="checkbox" name="verbs" value="juggle">juggle

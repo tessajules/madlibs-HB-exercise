@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Madlib{% endblock %}
+
+{% block header %}Madlibs!{% endblock %}
+
+{% block body %}
+    <p>One day a girl found a {{ color }} {{ noun }} on the sidewalk as she was walking in a very {{ adjective }} manner through downtown San Francisco with {{ person_name }}. </p>
+    <ul>  She then proceeded to do the following:
+        {% for verb in verbs %}
+            <li>{{ verb }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block footer %}Thanks for playing our game!{% endblock %}
