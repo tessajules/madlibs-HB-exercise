@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>The Game</title>
-</head>
-<body>
-    There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab. When {{ person_name }} went to pick it up, it burst into flames in a totally {{ adjective }} way.
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title %}Madlib{% endblock %}
+
+{% block header %}Madlibs!{% endblock %}
+
+{% block body %}
+    <p>There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab. When {{ person_name }} went to pick it up, it burst into flames in a totally {{ adjective }} way, after doing a variety of things:</p>
+    <ul>
+        {% for verb in verbs %}
+            <li>{{ verb }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block footer %}Thanks for playing our game!{% endblock %}

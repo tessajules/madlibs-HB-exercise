@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}TITLE HERE{% endblock %}</title>
+  <link rel="stylesheet" href="static/madlibs.css">
+</head>
+<body>
+    <div class="header">
+        <h1>{% block header %}HEADER HERE{% endblock %}</h1>
+    </div>
+    {% block body %}BODY HERE{% endblock %}
+    <footer>
+        <div class="footer-cell">
+            {%block footer %}FOOTER HERE{% endblock %}
+        </div>
+    </footer>
+</body>
+</html>

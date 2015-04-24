@@ -1,9 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Goodbye</title>
-</head>
-<body>
-    Ok, bye! We'll miss you!!!
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Goodbye{% endblock %}
+
+{% block header %}Goodbye!{% endblock %}
+
+{% block body %}
+    <p class="goodbye-text">We'll miss you!</p>
+{% endblock %}
+
+{% block footer %}<p>Thanks for not playing our game!</p>{% endblock %}

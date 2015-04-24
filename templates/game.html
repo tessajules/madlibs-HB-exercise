@@ -1,30 +1,36 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>The Game</title>
-</head>
-<body>
-    Fill out the form:
+{% extends 'base.html' %}
+{% block title %}The Game{% endblock %}
+{% block header %}Fill out the form:{% endblock %}
+{% block body %}  
 
-    <form action="/madlib">
-        <label>Type in a person's name:
-            <input type="text" name="person_name">
-        </label>
-        <label>Choose a color:
-            <select name="color">
-                <option value="Red">Red</option>
-                <option value="Blue">Blue</option>
-                <option value="Orange">Orange</option>
-                <option value="Turquoise">Turquoise</option>
-            </select>
-        </label>
-        <label>Type in a noun:
-            <input type="text" name="noun">
-        </label>
-        <label>Type in a adjective:
-            <input type="text" name="adjective">
-        </label>
-        <input type="submit" value="Submit Your Form!">
-    </form>
-</body>
-</html>
+        <form action="/madlib">
+            <label>Type in a person's name:
+                <input type="text" name="person_name">
+            </label>
+            <label>Choose a color:
+                <select name="color">
+                    <option value="Red">Red</option
+                    <option value="Blue">Blue</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Turquoise">Turquoise</option>
+                </select>
+            </label>
+            <label>Type in a noun:
+                <input type="text" name="noun">
+            </label>
+            <label>Type in an adjective:
+                <input type="text" name="adjective">
+            </label>
+            <label>Choose verbs:
+                <input type="checkbox" name="verbs" value="juggle">juggle
+                <input type="checkbox" name="verbs" value="balance">balance
+                <input type="checkbox" name="verbs" value="flip">flip
+                <input type="checkbox" name="verbs" value="twirl">twirl
+            </label>
+            <input type="submit" value="Submit Your Form!">
+        </form>
+{% endblock %}
+
+{% block footer %}Wow, you have a wild imagination!{% endblock %}
+
+
