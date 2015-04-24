@@ -3,12 +3,28 @@
 <head>
   <title>{% block title %}TITLE HERE{% endblock %}</title>
   <link rel="stylesheet" href="static/madlibs.css">
+
+  <script src="http://code.jquery.com/jquery.js"></script>
 </head>
 <body>
     <div class="header">
         <h1>{% block header %}HEADER HERE{% endblock %}</h1>
     </div>
     {% block body %}BODY HERE{% endblock %}
+    <script>
+    //  Bind the event handler to the "submit" JavaScript event
+    $('form').submit(function () {
+
+        // Get the Login Name value and trim it
+        var checkform = $.trim($('#checkform').val());
+
+        // Check if empty or not
+        if (checkform  === 'apples') {
+            alert('Text field is empty.');
+            return false;
+        }
+    });
+    </script>
     <footer>
         <div class="footer-cell">
             {%block footer %}FOOTER HERE{% endblock %}
